@@ -80,3 +80,15 @@ cast receipt 0xa49f5c6486da1839daa8f446c0565273734577a5fa8afa67c7e2641bd708ad7b 
 ```shell
 cast receipt 0xa49f5c6486da1839daa8f446c0565273734577a5fa8afa67c7e2641bd708ad7b --rpc-url "https://rpc.ankr.com/eth" --json | jq
 ```
+
+### 获取交易 [logs] data
+
+```shell
+cast receipt 0xa49f5c6486da1839daa8f446c0565273734577a5fa8afa67c7e2641bd708ad7b logs --rpc-url "https://rpc.ankr.com/eth"
+```
+
+## 执行区块中的先前交易 并输出调用栈
+
+```shell
+cast run 0x8053a0562721fc322a93af674a7445bc955897f3ea3a86fbf63c63cf1635480b --rpc-url https://rpc.ankr.com/eth_sepolia
+```
