@@ -92,3 +92,46 @@ cast receipt 0xa49f5c6486da1839daa8f446c0565273734577a5fa8afa67c7e2641bd708ad7b 
 ```shell
 cast run 0x8053a0562721fc322a93af674a7445bc955897f3ea3a86fbf63c63cf1635480b --rpc-url https://rpc.ankr.com/eth_sepolia
 ```
+
+## ENS
+
+### 解析 ens 获取 地址
+
+```shell
+cast resolve-name vitalik.eth
+```
+
+### 获取地址 对应的 ens
+
+```shell
+cast lookup-address 0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045
+```
+
+## 获取 verified 合约的 interface
+
+```shell
+cast interface 0xdac17f958d2ee523a2206206994597c13d831ec7 --
+rpc-url "https://rpc.ankr.com/eth"
+```
+
+## 获取 slot 内的数据
+
+`cast storage [OPTIONS] <ADDRESS> [SLOT]`
+
+```shell
+cast storage 0xdAC17F958D2ee523a2206206994597C13D831ec7 0x0be16d71963429204d70543701f859c43526c316ac005c10114f4694ca405f36 --rpc-url "https://rpc.ankr.com/eth"
+```
+
+## 调用合约（不发交易）
+
+`cast call [OPTIONS] [TO] [SIG] [ARGS]`
+
+```shell
+cast call 0xdac17f958d2ee523a2206206994597c13d831ec7 "balanceOf(address)(uint256)" 0xF977814e90dA44bFA03b6295A0616a897441aceC --rpc-url "https://rpc.ankr.com/eth"
+```
+
+## 调用合约（发交易）
+
+```shell
+cast send 0x590dcA422b660071F978E5A69851A18529B45415 "transfer(address,uint256)" 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266 1000000000000 --rpc-url "https://rpc.ankr.com/eth_sepolia" -i
+```
