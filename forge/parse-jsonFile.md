@@ -1,3 +1,9 @@
+foundry.toml
+
+```toml
+fs_permissions = [{ access = "read", path = "./"}]
+```
+
 test/json/demo.json
 
 ```json

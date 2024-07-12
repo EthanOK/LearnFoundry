@@ -27,7 +27,7 @@ forge test --match-path test/USDTFork.t.sol -vvv --fork-url https://rpc.ankr.com
 
 ```solidity
     function setUp() external {
-        // 配置 fork url; INFURA_MAINNET_RPC 为 .env 文件中的环境变量
+        // 配置 fork url; ETH_RPC_URL 为 .env 文件中的环境变量
         uint256 forkId = vm.createFork(vm.envString("ETH_RPC_URL"));
         vm.selectFork(forkId);
         // TODO
