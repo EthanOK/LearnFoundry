@@ -69,6 +69,12 @@ cast tx 0x81182c33059eac1057d9ef2aa40cdbaae73de08af5178fbe7f192818b4f61091 --rpc
 cast tx 0xa49f5c6486da1839daa8f446c0565273734577a5fa8afa67c7e2641bd708ad7b --rpc-url "https://rpc.ankr.com/eth" input
 ```
 
+执行结果:
+
+```
+0xa9059cbb00000000000000000000000067547791b4749e8cb7c6317d986df20260a2f72f000000000000000000000000000000000000000000000000000000004190ab00
+```
+
 ## 获取交易 receipt 信息
 
 ```shell
@@ -91,6 +97,19 @@ cast receipt 0xa49f5c6486da1839daa8f446c0565273734577a5fa8afa67c7e2641bd708ad7b 
 
 ```shell
 cast run 0x8053a0562721fc322a93af674a7445bc955897f3ea3a86fbf63c63cf1635480b --rpc-url https://rpc.ankr.com/eth_sepolia
+```
+
+执行结果:
+
+```
+Executing previous transactions from the block.
+Traces:
+  [24498] 0x378b43412b8f547341c6Ae9F6ddec09F966D4526::setURI("https://ipfs.io/ipfs/bafybeiheotgqnvnkapezsxdu3df7tnvsaz5ekuwxww26lq5ei3zi2eqmau/{id}")
+    └─ ← [Stop]
+
+
+Transaction successfully executed.
+Gas used: 47246
 ```
 
 ## ENS
